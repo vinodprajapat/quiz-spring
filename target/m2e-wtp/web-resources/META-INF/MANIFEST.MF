@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: quiz Maven Webapp
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: vinod prajapat
+Implementation-Vendor-Id: webapp
+Build-Jdk: 1.8.0_162
+Implementation-URL: http://maven.apache.org
+Created-By: Maven Integration for Eclipse
+

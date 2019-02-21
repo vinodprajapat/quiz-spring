@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="quiz.model.User">
+<select id = "totalcount" resultType = "int" >
+         select count(*) from user
+ </select> 
+ 
+ 
+ <select id = "finduser" resultType = "String"  parameterType="User">
+         select distinct name from user where name=#{name} and subject=#{subject}
+ </select> 
+ 
+  <select id = "checkProduct" resultType = "int"  parameterType="String">
+         select quantity from Inventory where productid=#{productid}
+ </select> 
+ 
+ <insert id='insertOrder' parameterType='Order'>
+   INSERT INTO OrderTable(productId, username, quantity, address)
+    VALUES(#{productId}, #{username}, #{quantity}, #{address})
+  </insert>
+ 
+</mapper>
